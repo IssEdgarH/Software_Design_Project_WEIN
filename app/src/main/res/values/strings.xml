@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">WEIN</string>
+    <string name="welcome_user">Welcome, User!</string>
+    <string name="wein">WEIN</string>
+    <string name="options">Options</string>
+    <string name="browse">Browse</string>
+    <string name="cart">Cart</string>
+    <string name="current_order">Current Order</string>
+    <string name="past_orders">All Orders</string>
+    <string name="logout">Logout</string>
+    <string name="login_screen">Login Page</string>
+    <string name="username_hint">username</string>
+    <string name="password_hint">password</string>
+    <string name="login">Login</string>
+    <string name="new_user">New User?</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="browsing_page">Browsing Page</string>
+    <string name="home">Home</string>
+    <string name="your_cart">Your Cart</string>
+    <string name="admin">Admin</string>
+    <string name="sign_up_page">Sign Up Page</string>
+    <string name="admin_page">Admin Page</string>
+    <string name="user_options">User Options</string>
+    <string name="add">Add</string>
+    <string name="view">View</string>
+    <string name="delete">Delete</string>
+    <string name="product_options">Product Options</string>
+</resources>

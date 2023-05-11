@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/welcome_message"
+        android:layout_width="410dp"
+        android:layout_height="63dp"
+        android:background="#2196F3"
+        android:paddingStart="10dp"
+        android:paddingTop="10dp"
+        android:text="@string/welcome_user"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/options_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="@string/options"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcome_message" />
+
+    <Button
+        android:id="@+id/browse_button"
+        android:layout_width="120dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/browse"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.151"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/options_text_view" />
+
+    <Button
+        android:id="@+id/cart_button"
+        android:layout_width="120dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/cart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.848"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/options_text_view" />
+
+    <Button
+        android:id="@+id/order_button"
+        android:layout_width="120dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/current_order"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.151"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/browse_button" />
+
+    <Button
+        android:id="@+id/orders_button"
+        android:layout_width="120dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/past_orders"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.848"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cart_button" />
+
+    <Button
+        android:id="@+id/admin_button"
+        android:layout_width="120dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="160dp"
+        android:text="@string/admin"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/logout_button"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/logout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
