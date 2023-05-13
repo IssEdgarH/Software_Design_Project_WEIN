@@ -34,4 +34,5 @@
     <string name="delete_merch">Delete Merch</string>
     <string name="button_to_delete_merch">Button to delete merch</string>
     <string name="x">X</string>
+    <string name="items_in_your_cart">Items in your cart:</string>
 </resources>

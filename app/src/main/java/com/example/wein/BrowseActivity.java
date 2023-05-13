@@ -28,6 +28,7 @@ public class BrowseActivity extends AppCompatActivity {
     private ActivityBrowseBinding mBrowseBinding;
 
     private WeinDAO mWeinDAO;
+    private Cart mUserCart;
     private List<Merchandise> mMerchandises;
 
     private SharedPreferences mPreferences;
@@ -46,7 +47,7 @@ public class BrowseActivity extends AppCompatActivity {
 
         // Get Database
         mWeinDAO = Room.databaseBuilder(this, AppDataBase.class, AppDataBase.DATABASE_NAME).allowMainThreadQueries().build().WeinDAO();
-
+        mUserCart = mWeinDAO.getCartByUserId(mUserId);
         ListView mBrowseItems = (ListView) findViewById(R.id.browse_items);
         mMerchandises = mWeinDAO.getAllMerchandise();
 
@@ -55,7 +56,7 @@ public class BrowseActivity extends AppCompatActivity {
         mBrowseItems.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                // Do Something
+                mUserCart.setItemsCount(mUserCart.getItemsCount() + 1);
             }
         });
     }

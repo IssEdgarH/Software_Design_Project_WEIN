@@ -155,6 +155,7 @@ public class MainActivity extends AppCompatActivity {
         List<User> users = mWeinDAO.getAllUsers();
         if(users.size() <= 0) {
             User adminUser = new User("admin", "password", true);
+            Cart adminCart = new Cart(0);
             mWeinDAO.insert(adminUser);
         }
         Intent intent = LoginActivity.getIntent(getApplicationContext());

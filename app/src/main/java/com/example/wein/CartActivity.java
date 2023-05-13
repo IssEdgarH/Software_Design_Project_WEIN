@@ -9,6 +9,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.example.wein.DB.AppDataBase;
 import com.example.wein.DB.WeinDAO;
@@ -19,9 +20,11 @@ public class CartActivity extends AppCompatActivity {
     private static final String PREFERENCES_KEY = "com.example.wein.preferencesKey";
 
     private Button cartToHomeButton;
+    private TextView itemsInCart;
     private ActivityCartBinding mCartBinding;
 
     private WeinDAO mWeinDAO;
+    private Cart mUserCart;
     private int mUserId;
     private SharedPreferences mPreferences;
 
@@ -38,6 +41,13 @@ public class CartActivity extends AppCompatActivity {
 
         // Get Database
         mWeinDAO = Room.databaseBuilder(this, AppDataBase.class, AppDataBase.DATABASE_NAME).allowMainThreadQueries().build().WeinDAO();
+        mUserCart = mWeinDAO.getCartByUserId(mUserId);
+
+        itemsInCart = mCartBinding.cartItemsText;
+        StringBuilder message = new StringBuilder();
+        message.append("Items in your cart: ");
+        message.append(mUserCart.getItemsCount());
+        itemsInCart.setText(message);
 
 
         cartToHomeButton = mCartBinding.cartToHomeButton;
