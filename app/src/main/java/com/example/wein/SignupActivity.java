@@ -52,17 +52,28 @@ public class SignupActivity extends AppCompatActivity {
         signupButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                List<User> users = mWeinDAO.getAllUsers();
-                for (User user : users) {
-                    if(user.getUsername().equals(enteredUsername.getText().toString())) {
-                        Toast.makeText(SignupActivity.this, "Username Taken", Toast.LENGTH_SHORT).show();
-                        return;
-                    }
+                if(enteredUsername.getText().toString().equals("") && enteredPassword.getText().toString().equals("")) {
+                    Toast.makeText(SignupActivity.this, "Empty Username and Password.", Toast.LENGTH_SHORT).show();
                 }
-                mUser = new User(enteredUsername.getText().toString(), enteredPassword.getText().toString(), false);
-                mWeinDAO.insert(mUser);
-                Intent intent = LoginActivity.getIntent(getApplicationContext());
-                startActivity(intent);
+                else if (enteredUsername.getText().toString().equals("")) {
+                    Toast.makeText(SignupActivity.this, "Empty Username", Toast.LENGTH_SHORT).show();
+                }
+                else if (enteredPassword.getText().toString().equals("")) {
+                    Toast.makeText(SignupActivity.this, "Empty Password", Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    List<User> users = mWeinDAO.getAllUsers();
+                    for (User user : users) {
+                        if (user.getUsername().equals(enteredUsername.getText().toString())) {
+                            Toast.makeText(SignupActivity.this, "Username Taken", Toast.LENGTH_SHORT).show();
+                            return;
+                        }
+                    }
+                    mUser = new User(enteredUsername.getText().toString(), enteredPassword.getText().toString(), false);
+                    mWeinDAO.insert(mUser);
+                    Intent intent = LoginActivity.getIntent(getApplicationContext());
+                    startActivity(intent);
+                }
             }
         });
 

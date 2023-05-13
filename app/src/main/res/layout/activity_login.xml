@@ -32,7 +32,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cart_header" />
+        app:layout_constraintTop_toBottomOf="@+id/cart_header"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/password_edit_text"
@@ -46,7 +47,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/username_edit_text" />
+        app:layout_constraintTop_toBottomOf="@+id/username_edit_text"
+        android:autofillHints="" />
 
     <Button
         android:id="@+id/login_button"

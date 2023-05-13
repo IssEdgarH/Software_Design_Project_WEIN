@@ -16,15 +16,13 @@ public class AdminActivity extends AppCompatActivity {
     private static final String USER_ID_KEY = "com.example.wein.userIdKey";
     private static final String PREFERENCES_KEY = "com.example.wein.preferencesKey";
 
-    private Button adminToHomeButton;
-    private ActivityAdminBinding mAdminBinding;
+    Button mAdminToHomeButton;
+    Button mAddMerchandiseButton;
+    Button mDeleteMerchandiseButton;
+    ActivityAdminBinding mAdminBinding;
 
     private SharedPreferences mPreferences;
     private int mUserId;
-
-    public static Intent getIntent(Context applicationContext) {
-        return new Intent(applicationContext, AdminActivity.class);
-    }
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -37,14 +35,37 @@ public class AdminActivity extends AppCompatActivity {
         mPreferences = getSharedPreferences(PREFERENCES_KEY, Context.MODE_PRIVATE);
         mUserId = mPreferences.getInt(USER_ID_KEY, -1);
 
-        adminToHomeButton = mAdminBinding.adminToHomeButton;
+        mAdminToHomeButton = mAdminBinding.adminToHomeButton;
+        mAddMerchandiseButton = mAdminBinding.addMerchandiseButton;
+        mDeleteMerchandiseButton = mAdminBinding.deleteMerchandiseButton;
 
-        adminToHomeButton.setOnClickListener(new View.OnClickListener() {
+        mAdminToHomeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = MainActivity.getIntent(getApplicationContext(), mUserId);
                 startActivity(intent);
             }
         });
+
+        mAddMerchandiseButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = AddMerchandiseActivity.getIntent(getApplicationContext());
+                startActivity(intent);
+            }
+        });
+
+        mDeleteMerchandiseButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = DeleteMerchandiseActivity.getIntent(getApplicationContext());
+                startActivity(intent);
+            }
+        });
+
+    }
+
+    public static Intent getIntent(Context applicationContext) {
+        return new Intent(applicationContext, AdminActivity.class);
     }
 }

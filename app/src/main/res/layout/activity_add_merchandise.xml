@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/add_merchandise_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#2196F3"
+        android:paddingStart="10dp"
+        android:text="@string/add_merchandise"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/merchandise_name_edit_text"
+        android:layout_width="280dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="64dp"
+        android:ems="10"
+        android:hint="@string/merchandise_name"
+        android:text=""
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_merchandise_header" />
+
+    <EditText
+        android:id="@+id/merchandise_description_edit_text"
+        android:layout_width="280dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="@string/merchandise_description"
+        android:inputType="textMultiLine"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/merchandise_name_edit_text" />
+
+    <Button
+        android:id="@+id/add_merchandise"
+        android:layout_width="90dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/add"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/entered_merchandise_price" />
+
+    <Button
+        android:id="@+id/add_merchandise_to_admin_button"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/return_str"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/entered_merchandise_price"
+        android:layout_width="280dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="@string/merchandise_price"
+        android:text=""
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/merchandise_description_edit_text" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
