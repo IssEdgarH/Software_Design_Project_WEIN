@@ -20,7 +20,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/user_header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
@@ -32,40 +32,27 @@
         app:layout_constraintTop_toBottomOf="@+id/admin_welcome_message" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/view_users_button"
         android:layout_width="90dp"
         android:layout_height="60dp"
-        android:layout_marginStart="32dp"
+        android:layout_marginStart="96dp"
         android:layout_marginTop="32dp"
-        android:text="@string/add"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="90dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="31dp"
         android:text="@string/view"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button3"
-        app:layout_constraintHorizontal_bias="0.148"
-        app:layout_constraintStart_toEndOf="@+id/button"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.064" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/user_header" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/delete_user_button"
         android:layout_width="90dp"
         android:layout_height="60dp"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginEnd="96dp"
         android:text="@string/delete"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/user_header" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/merchandies_header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="360dp"
@@ -85,4 +72,25 @@
         android:text="@string/home"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/add_merchandise_button"
+        android:layout_width="90dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/add"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/merchandies_header" />
+
+    <Button
+        android:id="@+id/delete_merchandise_button"
+        android:layout_width="90dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="100dp"
+        android:text="@string/delete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/merchandies_header" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

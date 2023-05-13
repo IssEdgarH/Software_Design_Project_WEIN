@@ -43,7 +43,11 @@ public class LoginActivity extends AppCompatActivity{
             public void onClick(View view) {
                 mUsername = mUsernameField.getText().toString();
                 mPassword = mPasswordField.getText().toString();
-                if(checkForUserInDatabase()) {
+
+                if(mUsername.equals("") || mPassword.equals("")) {
+                    Toast.makeText(LoginActivity.this, "Empty Fields", Toast.LENGTH_SHORT).show();
+                }
+                else if(checkForUserInDatabase()) {
                     if(!(mUser.getPassword().equals(mPassword))) {
                         Toast.makeText(LoginActivity.this, "Invalid password", Toast.LENGTH_SHORT).show();
                     }
@@ -68,7 +72,7 @@ public class LoginActivity extends AppCompatActivity{
     private boolean checkForUserInDatabase() {
         mUser = mWeinDAO.getUserByUsername(mUsername);
         if(mUser == null) {
-            Toast.makeText(this, "no user " + mUsername + " found", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "No user " + mUsername + " found", Toast.LENGTH_SHORT).show();
             return false;
         }
         return true;

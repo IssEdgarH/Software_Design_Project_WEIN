@@ -24,5 +24,14 @@
     <string name="add">Add</string>
     <string name="view">View</string>
     <string name="delete">Delete</string>
-    <string name="product_options">Product Options</string>
+    <string name="product_options">Merchandise Options</string>
+    <string name="add_merchandise">Add Merchandise</string>
+    <string name="name">Name</string>
+    <string name="merchandise_name">Merchandise Name</string>
+    <string name="merchandise_description">Merchandise Description</string>
+    <string name="return_str">Return</string>
+    <string name="merchandise_price">Merchandise Price</string>
+    <string name="delete_merch">Delete Merch</string>
+    <string name="button_to_delete_merch">Button to delete merch</string>
+    <string name="x">X</string>
 </resources>
