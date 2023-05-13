@@ -61,4 +61,9 @@ public class Merchandise {
     public void setCartId(int cartId) {
         mCartId = cartId;
     }
+
+    @Override
+    public String toString() {
+        return mMerchandiseId + ". " + mName;
+    }
 }
