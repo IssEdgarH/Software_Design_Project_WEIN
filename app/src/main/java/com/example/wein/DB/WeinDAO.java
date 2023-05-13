@@ -5,6 +5,7 @@ import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
 
+import com.example.wein.Cart;
 import com.example.wein.Merchandise;
 import com.example.wein.User;
 
@@ -38,4 +39,10 @@ public interface WeinDAO {
 
     @Query("SELECT * FROM " + AppDataBase.MERCHANDISE_TABLE + " WHERE mMerchandiseId = :merchandiseId")
     Merchandise getMerchandiseById(int merchandiseId);
+
+    @Insert
+    void insert(Cart...carts);
+
+    @Query("SELECT * FROM " + AppDataBase.CART_TABLE + " WHERE cartId = :userId")
+    Cart getCartByUserId(int userId);
 }

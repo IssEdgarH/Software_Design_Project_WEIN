@@ -29,6 +29,7 @@ public class SignupActivity extends AppCompatActivity {
 
     private WeinDAO mWeinDAO;
     private User mUser;
+    private Cart mCart;
 
     public static Intent getIntent(Context applicationContext) {
         return new Intent(applicationContext, SignupActivity.class);
@@ -70,6 +71,7 @@ public class SignupActivity extends AppCompatActivity {
                         }
                     }
                     mUser = new User(enteredUsername.getText().toString(), enteredPassword.getText().toString(), false);
+                    mCart = new Cart(0);
                     mWeinDAO.insert(mUser);
                     Intent intent = LoginActivity.getIntent(getApplicationContext());
                     startActivity(intent);
